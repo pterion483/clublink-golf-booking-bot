@@ -1,0 +1,88 @@
+{
+  "health": {
+    "timestamp": "2025-09-16T00:17:15.990502",
+    "files": {
+      "cloudflare_handler.py": {
+        "exists": true,
+        "size": 6875,
+        "modified": "2025-09-16T00:14:15.434299",
+        "executable": true
+      },
+      "ultrafast_bot.py": {
+        "exists": true,
+        "size": 14779,
+        "modified": "2025-09-16T00:15:09.837642",
+        "executable": true
+      },
+      "claude_mcp_booking.py": {
+        "exists": true,
+        "size": 13365,
+        "modified": "2025-09-15T22:26:31.513896",
+        "executable": true
+      },
+      "morning_gap_finder_claude.py": {
+        "exists": true,
+        "size": 4820,
+        "modified": "2025-09-15T22:50:52.773815",
+        "executable": true
+      },
+      "overnight_gap_finder_claude.py": {
+        "exists": true,
+        "size": 4963,
+        "modified": "2025-09-16T00:04:39.787980",
+        "executable": true
+      },
+      "cron_wrapper.sh": {
+        "exists": true,
+        "size": 3758,
+        "modified": "2025-09-16T00:05:03.171338",
+        "executable": true
+      },
+      "CLAUDE.md": {
+        "exists": true,
+        "size": 4057,
+        "modified": "2025-09-16T00:08:00.203350",
+        "executable": false
+      }
+    },
+    "logs": {
+      "total_files": 22,
+      "today_files": 7,
+      "last_booking_attempt": "2025-09-15T22:19:58.744742"
+    },
+    "system": {
+      "cpu_percent": 0.2,
+      "memory_percent": 4.5,
+      "disk_percent": 2.1,
+      "load_avg": [
+        0.05615234375,
+        0.05419921875,
+        0.0283203125
+      ],
+      "booking_processes": [
+        {
+          "pid": 71333,
+          "name": "bash",
+          "cmdline": "/bin/bash -c -l source /home/dmin1/.claude/shell-snapshots/snapshot-bash-1757802767679-11fr8j.sh && eval 'cd \"/home/dmin1/Golf Tee Times Bot/Claude Implementation\" && source venv/bin/activate && nohup python ultrafast_bot.py > ultrafast_output.log 2>&1 &' \\< /dev/null && pwd -P >| /tmp/claude-a8af-cwd"
+        },
+        {
+          "pid": 71335,
+          "name": "python",
+          "cmdline": "python ultrafast_bot.py"
+        }
+      ]
+    },
+    "cron": {
+      "total_entries": 21,
+      "golf_entries": 10,
+      "configured": true
+    },
+    "overall_status": "HEALTHY"
+  },
+  "booking": {
+    "next_booking": "2025-09-16T06:30:00",
+    "time_until_seconds": 22362.976953,
+    "time_until_formatted": "06:12:42"
+  },
+  "last_check": "2025-09-16T00:17:17.023817"
+}

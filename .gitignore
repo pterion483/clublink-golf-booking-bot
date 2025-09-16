@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.env
+
+# Logs
+logs/
+*.log
+*.gz
+
+# Screenshots
+screenshots/
+*.png
+*.jpg
+
+# Temporary files
+current_gap_finder_prompt.txt
+current_claude_prompt.txt
+test_claude_prompt.txt
+*.tmp
+*.bak
+*.swp
+
+# Personal/Sensitive (keeping CLAUDE.md since it's critical instructions)
+# But consider removing credentials from it before pushing to public repo
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# OS
+.DS_Store
+Thumbs.db
