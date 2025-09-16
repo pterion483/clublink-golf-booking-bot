@@ -1,4 +1,16 @@
-# ClubLink Golf Booking - Critical Project Instructions
+# ClubLink Golf Booking - Claude Code MCP Direct Execution System
+
+## 🚨 CRITICAL ARCHITECTURE: AI-DRIVEN EXECUTION
+**This system uses Claude Code with Playwright MCP tools for DIRECT booking execution:**
+1. **Python scripts**: Generate prompt files with booking instructions
+2. **Cron jobs**: Launch Claude Code via `claude_executor.sh`
+3. **Claude Code**: Reads prompts and executes bookings using MCP browser tools
+4. **All bookings are done by Claude Code, NOT Python scripts!**
+
+### Execution Flow
+- **6:30 AM Booking**: cron → claude_executor.sh → Python (generates prompt) → Claude Code (executes booking)
+- **Gap Finders**: cron → claude_executor.sh → Python (generates prompt) → Claude Code (finds gaps & books)
+- Claude Code uses `mcp__playwright__browser_*` tools for all web interactions
 
 ## 🚨 CLOUDFLARE CHALLENGE - MOST CRITICAL
 ### THE #1 CAUSE OF FAILURE: Being Too Slow!
@@ -89,12 +101,13 @@ Required courses in priority order:
   - Books max ONE time per run
 
 ## 🔧 AI-Driven System Files
-- **booking_instructions.md**: Complete AI agent instructions with all refs
-- **claude_mcp_booking.py**: Main orchestrator (6:30 AM booking)
-- **morning_gap_finder_claude.py**: Daytime gap finder (days 1-5)
-- **overnight_gap_finder_claude.py**: Overnight gap finder (days 2-5)
-- **claude_crontab_enhanced**: Full cron configuration
-- **cron_wrapper.sh**: Cron execution wrapper with logging
+- **claude_executor.sh**: Main launcher that calls Claude Code to execute bookings
+- **claude_mcp_booking.py**: Generates prompts for 6:30 AM booking
+- **morning_gap_finder_claude.py**: Generates prompts for daytime gap finder (days 1-5)
+- **overnight_gap_finder_claude.py**: Generates prompts for overnight gap finder (days 2-5)
+- **claude_direct_crontab**: Cron configuration that launches Claude Code
+- **current_claude_prompt.txt**: Generated prompt file for Claude Code to read and execute
+- **current_gap_finder_prompt.txt**: Generated gap finder prompt for Claude Code
 
 ## ❗ Critical Success Factors
 1. **Cloudflare speed**: Click within 1 second

@@ -26,6 +26,7 @@ class ClaudeMCPBookingAgent:
         # Booking configuration
         self.credentials = {
             "membership": "224816",
+            "email": "Sid.saini1@gmail.com",
             "password": "160599Golf",
             "login_url": "https://kingvalley.clublink.ca/login"
         }
@@ -122,10 +123,12 @@ class ClaudeMCPBookingAgent:
                 {
                     "step": 3,
                     "action": "login",
-                    "description": "Enter credentials and login",
+                    "description": "Analyze login form and enter appropriate credentials",
                     "sub_steps": [
-                        "Type membership number",
-                        "Type password",
+                        "Analyze login form to determine if it requires email or membership number",
+                        "If email format required: Use Sid.saini1@gmail.com",
+                        "If membership number required: Use 224816",
+                        "Type password: 160599Golf",
                         "Click login button"
                     ]
                 },
@@ -211,22 +214,29 @@ CRITICAL: This is a time-sensitive booking that opens at exactly 6:30 AM. Speed 
    - For 'book' action, you must click Search at EXACTLY 6:30:00 AM
    - Use system time checks to ensure microsecond precision
 
-2. **Cloudflare Handling**:
+2. **Login Adaptation**:
+   - Analyze the login form to determine if it requires:
+     * Email format: Use Sid.saini1@gmail.com
+     * Membership number: Use 224816
+   - Password: 160599Golf
+   - The system may change between email and membership login, adapt accordingly
+
+3. **Cloudflare Handling**:
    - The challenge appears immediately after clicking Search
    - You MUST move the mouse to coordinates {self.cloudflare_coords} and click
    - This must happen within 200ms or the booking will fail
    - Use mcp__playwright__browser_hover followed by mcp__playwright__browser_click
 
-3. **Course Selection**:
+4. **Course Selection**:
    - You must select exactly 6 courses from the list
    - Use the provided course names in priority order
 
-4. **Adaptive Behavior**:
+5. **Adaptive Behavior**:
    - Use browser_snapshot to understand page state
    - Adapt to any UI changes you observe
    - If something fails, try alternative approaches
 
-5. **Success Criteria**:
+6. **Success Criteria**:
    - Booking confirmed within 15 seconds of 6:30 AM
    - Screenshot of confirmation saved
    - Earliest available time secured

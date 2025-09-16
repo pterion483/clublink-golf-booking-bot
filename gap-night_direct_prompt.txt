@@ -1,0 +1,18 @@
+
+Execute gap finder using MCP Playwright tools to find and book missing morning times.
+
+Workflow:
+1. mcp__playwright__browser_navigate to: https://linklineonline.ca/web/my-account/itinerary
+2. Login if needed: 224816 / 160599Golf
+3. mcp__playwright__browser_snapshot to see current bookings
+4. Identify dates without morning bookings: 2025-09-18, 2025-09-19, 2025-09-20, 2025-09-21
+5. For first gap found:
+   - mcp__playwright__browser_navigate to: https://linklineonline.ca/web/tee-times
+   - Select primary courses: King Valley, King's Riding, Wyndance, Station Creek South, Diamondback, Station Creek North
+   - mcp__playwright__browser_click Search
+   - mcp__playwright__browser_hover and click (464, 572) for Cloudflare
+   - If no morning times, try backup courses: Emerald Hills T1, Emerald Hills T10, Emerald Hills T19, Caledon Woods
+6. mcp__playwright__browser_click on earliest morning time if available
+7. Complete booking and mcp__playwright__browser_take_screenshot
+
+Book only ONE time per execution. Focus on times before 11:00 AM.

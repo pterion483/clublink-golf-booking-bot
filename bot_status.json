@@ -1,6 +1,6 @@
 {
   "health": {
-    "timestamp": "2025-09-16T00:17:15.990502",
+    "timestamp": "2025-09-16T07:29:45.476042",
     "files": {
       "cloudflare_handler.py": {
         "exists": true,
@@ -46,18 +46,18 @@
       }
     },
     "logs": {
-      "total_files": 22,
-      "today_files": 7,
-      "last_booking_attempt": "2025-09-15T22:19:58.744742"
+      "total_files": 28,
+      "today_files": 13,
+      "last_booking_attempt": "2025-09-16T06:30:01.215148"
     },
     "system": {
-      "cpu_percent": 0.2,
-      "memory_percent": 4.5,
+      "cpu_percent": 0.4,
+      "memory_percent": 4.4,
       "disk_percent": 2.1,
       "load_avg": [
-        0.05615234375,
+        0.154296875,
         0.05419921875,
-        0.0283203125
+        0.01318359375
       ],
       "booking_processes": [
         {
@@ -69,6 +69,16 @@
           "pid": 71335,
           "name": "python",
           "cmdline": "python ultrafast_bot.py"
+        },
+        {
+          "pid": 168793,
+          "name": "bash",
+          "cmdline": "/bin/bash -c -l source /home/dmin1/.claude/shell-snapshots/snapshot-bash-1757981046946-l0ykom.sh && eval 'python3 /home/dmin1/Golf\\ Tee\\ Times\\ Bot/monitor_bot.py' \\< /dev/null && pwd -P >| /tmp/claude-31d7-cwd"
+        },
+        {
+          "pid": 168817,
+          "name": "python3",
+          "cmdline": "python3 /home/dmin1/Golf Tee Times Bot/monitor_bot.py"
         }
       ]
     },
@@ -80,9 +90,9 @@
     "overall_status": "HEALTHY"
   },
   "booking": {
-    "next_booking": "2025-09-16T06:30:00",
-    "time_until_seconds": 22362.976953,
-    "time_until_formatted": "06:12:42"
+    "next_booking": "2025-09-17T06:30:00",
+    "time_until_seconds": 82813.465107,
+    "time_until_formatted": "23:00:13"
   },
-  "last_check": "2025-09-16T00:17:17.023817"
+  "last_check": "2025-09-16T07:29:46.535636"
 }

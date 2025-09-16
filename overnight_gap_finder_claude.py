@@ -48,13 +48,17 @@ def generate_claude_prompt():
 Please execute the following golf booking gap finder task using Playwright MCP tools:
 
 ## Step 1: Check Current Bookings
-1. Navigate to https://linklineonline.ca/web/my-account/itinerary
-2. If not logged in:
-   - Go to https://kingvalley.clublink.ca/login
-   - Login with Membership: 224816, Password: 160599Golf
-   - Navigate back to itinerary
-3. Take a snapshot and identify all bookings
-4. Make a list of dates that have morning bookings (before 11:00 AM)
+1. Navigate to https://kingvalley.clublink.ca/login
+2. Login with credentials:
+   - Analyze the login form to determine if it requires:
+     * Email format: Use Sid.saini1@gmail.com
+     * Membership number: Use 224816
+   - Password: 160599Golf
+   - The system may change between email and membership login, adapt accordingly
+3. After successful login, click "Tee Times Plus" to access linklineonline.ca
+4. Navigate to https://linklineonline.ca/web/my-account/itinerary
+5. Take a snapshot and identify all bookings
+6. Make a list of dates that have morning bookings (before 11:00 AM)
 
 ## Step 2: Find Gap Days
 Check these dates: {', '.join(dates_to_check)}
